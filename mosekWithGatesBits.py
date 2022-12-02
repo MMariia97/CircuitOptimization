@@ -45,28 +45,6 @@ def convert_to_minus(x):
     # 0 -> 1, 1 -> -1
     return (1 - 2*numpy.multiply(x, 1))
 
-
-def getEquations(*x, symexpr, N):
-    a = numpy.zeros(N*(N+1)+2)
-    for i in range(N):
-        a[i] = convert_to_minus(x[i])  # find coefficients for h_i
-        for row in range(N):
-            for col in range(N):
-                if (row < col):
-                    # find coefficients for J_ij, i<j
-                    a[col + row*N +
-                        N] = convert_to_minus(x[row])*convert_to_minus(x[col])
-                else:
-                    a[col + row*N + N] = 0
-        sat = symexpr(x)
-        print(sat)
-        if (sat == True):
-            a[N*(N+1)] = 0
-        else:
-            a[N*(N+1)] = -1  # find coefficients for g
-        a[N*(N+1)+1] = -1  # coefficient for k
-        return a
-
 def addToExpr(arr, circBitsArr, rows, cols):
     expr1 = ''
     for row in range(rows):
@@ -169,11 +147,6 @@ def addNOT2ToExpr(rows, cols, circBitsArr):
     return expr1
 
 
-def convert_to_minus(x):
-    # 0 -> 1, 1 -> -1
-    return (1 - 2*numpy.multiply(x, 1))
-
-
 def getEquations(*x, symexpr, N):
     a = numpy.zeros(N*(N+1)+2)
     for i in range(N):
@@ -202,7 +175,7 @@ def findHamiltonian(xx, nvars):
     for i in range(nvars-1):
         for j in range(i+1,nvars):
             J_dict[(i, j)] = xx[i*nvars+j+nvars-1]
-            print("J", J_dict)
+    print("J", J_dict)
 
     sampler = neal.SimulatedAnnealingSampler()
     sampleset = sampler.sample_ising(h_dict, J_dict, num_reads=100)
@@ -309,8 +282,7 @@ def main():
             asub.append(list(I[indices]))
             aval.append(list(V[indices]))
           #  print("aval", aval)
-        print(asub)
-        print(aval)
+
         # Append 'numcon' empty constraints.
         # The constraints will initially have no bounds.
         task.appendcons(numcon)
