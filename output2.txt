@@ -1,0 +1,377 @@
+Running HiGHS 1.2.2 [date: 2022-09-04, git hash: 8701dbf19]
+Copyright (c) 2022 ERGO-Code under MIT licence terms
+Presolving model
+156 rows, 344 cols, 53664 nonzeros
+46 rows, 344 cols, 15824 nonzeros
+46 rows, 344 cols, 15824 nonzeros
+Presolve : Reductions: rows 46(-262098); columns 344(-0); elements 15824(-37840)
+Solving the presolved LP
+Using EKK dual simplex solver - serial
+  Iteration        Objective     Infeasibilities num(sum)
+          0    -9.9999882415e-01 Ph1: 46(45948); Du: 1(0.999999) 0s
+        108    -6.6000000000e+01 Pr: 0(0) 0s
+Solving the original LP from the solution after postsolve
+Model   status      : Optimal
+Simplex   iterations: 108
+Objective value     :  6.6000000000e+01
+HiGHS run time      :          0.07
+expression  ~x0 & ~x1 & ~x2 & ~x3 & ~x4 & x5 & ~x6 & x7 & x8 & ~x9 & x10 & x11 & x12 & x13 & x14 & ~x15 & (~x0 & ~x1 & ~x2 & ~x3 & ~x4 & x5 & ~x6 & x7 & x8 & ~x9 & x10 & x11 & x12 & x13 & x14 & ~x15 & ~x16 & ~x17 | ~x0 & ~x1 & ~x2 & ~x3 & ~x4 & x5 & x6 & x7 & x8 & ~x9 & x10 & ~x11 & x12 & x13 & ~x14 & x15 & ~x16 & x17 | ~x0 & ~x1 & x2 & ~x3 & ~x4 & x5 & x6 & x7 & x8 & ~x9 & ~x10 & ~x11 & x12 & x13 & ~x14 & x15 & x16 & ~x17 | ~x0 & ~x1 & ~x2 & x3 & ~x4 & x5 & ~x6 & ~x7 & x8 & ~x9 & x10 & x11 & x12 & x13 & x14 & ~x15 & x16 & x17)
+cnf  x10 & x11 & x12 & x13 & x14 & x5 & x7 & x8 & ~x0 & ~x1 & ~x15 & ~x2 & ~x3 & ~x4 & ~x6 & ~x9 & (x15 | x16 | ~x17) & (x15 | x17 | ~x16) & (x15 | x3 | ~x16) & (x15 | x3 | ~x17) & (x16 | x6 | ~x17) & (x17 | x2 | ~x16) & (x17 | x6 | ~x16) & (x2 | x3 | ~x16) & (x3 | x6 | ~x16) & (x3 | x6 | ~x17) & (x15 | ~x16 | ~x7) & (x15 | ~x17 | ~x7) & (x16 | ~x11 | ~x17) & (x16 | ~x14 | ~x17) & (x17 | ~x10 | ~x16) & (x17 | ~x11 | ~x16) & (x17 | ~x14 | ~x16) & (x2 | ~x16 | ~x7) & (x3 | ~x10 | ~x16) & (x3 | ~x11 | ~x16) & (x3 | ~x11 | ~x17) & (x3 | ~x14 | ~x16) & (x3 | ~x14 | ~x17) & (x3 | ~x16 | ~x17) & (x6 | ~x16 | ~x7) & (x6 | ~x17 | ~x7) & (~x10 | ~x16 | ~x7) & (~x11 | ~x16 | ~x7) & (~x11 | ~x17 | ~x7) & (~x14 | ~x16 | ~x7) & (~x14 | ~x17 | ~x7) & (~x16 | ~x17 | ~x7)
+Model status =  Optimal
+Optimal objective =  66.0
+Iteration count =  108
+Primal solution status =  Feasible
+Dual solution status =  Feasible
+Basis validity =  Valid
+Variables
+0 2.0 At upper bound
+1 2.0 At upper bound
+2 2.0 At upper bound
+3 -0.0 Basic
+4 2.0 At upper bound
+5 2.0 Basic
+6 2.0 At upper bound
+7 -2.0 At lower/fixed bound
+8 2.0 At upper bound
+9 -2.0 At lower/fixed bound
+10 2.0 At upper bound
+11 -2.0 At lower/fixed bound
+12 2.0 At upper bound
+13 -2.0 At lower/fixed bound
+14 2.0 At upper bound
+15 -2.0 At lower/fixed bound
+16 2.0 At upper bound
+17 1.0 Basic
+18 1.0 At upper bound
+19 -1.0 At lower/fixed bound
+20 1.0 At upper bound
+21 -1.0 At lower/fixed bound
+22 -1.0 At lower/fixed bound
+23 -1.0 At lower/fixed bound
+24 1.0 At upper bound
+25 -1.0 At lower/fixed bound
+26 1.0 At upper bound
+27 -1.0 At lower/fixed bound
+28 1.0 At upper bound
+29 -1.0 At lower/fixed bound
+30 -1.0 At lower/fixed bound
+31 -1.0 Basic
+32 1.0 At upper bound
+33 -1.0 At lower/fixed bound
+34 1.0 At upper bound
+35 -1.0 At lower/fixed bound
+36 1.0 At upper bound
+37 -1.0 At lower/fixed bound
+38 1.0 At upper bound
+39 -1.0 At lower/fixed bound
+40 1.0 At upper bound
+41 -1.0 At lower/fixed bound
+42 1.0 At upper bound
+43 -1.0 At lower/fixed bound
+44 1.0 At upper bound
+45 -1.0 At lower/fixed bound
+46 1.0 At upper bound
+47 -1.0 At lower/fixed bound
+48 1.0 At upper bound
+49 -1.0 At lower/fixed bound
+50 1.0 At upper bound
+51 -1.0 Basic
+52 1.0 At upper bound
+53 -1.0 At lower/fixed bound
+54 -1.0 At lower/fixed bound
+55 -1.0 At lower/fixed bound
+56 1.0 At upper bound
+57 -1.0 At lower/fixed bound
+58 1.0 At upper bound
+59 -1.0 At lower/fixed bound
+60 1.0 At upper bound
+61 -1.0 At lower/fixed bound
+62 1.0 Basic
+63 1.0 At upper bound
+64 1.0 At upper bound
+65 -1.0 At lower/fixed bound
+66 1.0 At upper bound
+67 -1.0 At lower/fixed bound
+68 1.0 At upper bound
+69 -1.0 At lower/fixed bound
+70 -1.0 At lower/fixed bound
+71 -1.0 Basic
+72 1.0 At upper bound
+73 -1.0 At lower/fixed bound
+74 1.0 At upper bound
+75 -1.0 At lower/fixed bound
+76 1.0 At upper bound
+77 -1.0 At lower/fixed bound
+78 -1.0 At lower/fixed bound
+79 1.0 At upper bound
+80 1.0 At upper bound
+81 -1.0 At lower/fixed bound
+82 -1.0 At lower/fixed bound
+83 1.0 At upper bound
+84 -1.0 At lower/fixed bound
+85 -1.0 At lower/fixed bound
+86 -1.0 At lower/fixed bound
+87 -1.0 At lower/fixed bound
+88 1.0 At upper bound
+89 -1.0 At lower/fixed bound
+90 -1.0 At lower/fixed bound
+91 -0.0 Basic
+92 -1.0 At lower/fixed bound
+93 1.0 Basic
+94 -1.0 At lower/fixed bound
+95 1.0 At upper bound
+96 1.0 At upper bound
+97 -1.0 At lower/fixed bound
+98 1.0 At upper bound
+99 -1.0 At lower/fixed bound
+100 1.0 At upper bound
+101 -1.0 At lower/fixed bound
+102 -1.0 At lower/fixed bound
+103 1.0 Basic
+104 1.0 At upper bound
+105 -1.0 At lower/fixed bound
+106 1.0 At upper bound
+107 -1.0 At lower/fixed bound
+108 -0.0 Basic
+109 -1.0 At lower/fixed bound
+110 -1.0 At lower/fixed bound
+111 1.0 At upper bound
+112 1.0 At upper bound
+113 -1.0 At lower/fixed bound
+114 -1.0 At lower/fixed bound
+115 -0.0 Basic
+116 -1.0 At lower/fixed bound
+117 1.0 Basic
+118 -1.0 At lower/fixed bound
+119 1.0 At upper bound
+120 1.0 Basic
+121 -1.0 At lower/fixed bound
+122 -1.0 At lower/fixed bound
+123 1.0 At upper bound
+124 -1.0 At lower/fixed bound
+125 1.0 At upper bound
+126 -1.0 At lower/fixed bound
+127 1.0 At upper bound
+128 1.0 At upper bound
+129 -1.0 At lower/fixed bound
+130 1.0 At upper bound
+131 -1.0 At lower/fixed bound
+132 1.0 At upper bound
+133 -1.0 At lower/fixed bound
+134 1.0 At upper bound
+135 -1.0 At lower/fixed bound
+136 1.0 At upper bound
+137 -1.0 At lower/fixed bound
+138 1.0 At upper bound
+139 -1.0 At lower/fixed bound
+140 1.0 At upper bound
+141 -1.0 At lower/fixed bound
+142 1.0 At upper bound
+143 -1.0 At lower/fixed bound
+144 1.0 At upper bound
+145 -1.0 At lower/fixed bound
+146 1.0 At upper bound
+147 -1.0 At lower/fixed bound
+148 1.0 At upper bound
+149 -1.0 At lower/fixed bound
+150 -1.0 At lower/fixed bound
+151 1.0 At upper bound
+152 1.0 At upper bound
+153 -1.0 At lower/fixed bound
+154 1.0 At upper bound
+155 -1.0 At lower/fixed bound
+156 1.0 At upper bound
+157 -1.0 At lower/fixed bound
+158 -1.0 At lower/fixed bound
+159 1.0 Basic
+160 1.0 At upper bound
+161 -1.0 At lower/fixed bound
+162 1.0 At upper bound
+163 -1.0 At lower/fixed bound
+164 1.0 At upper bound
+165 -1.0 At lower/fixed bound
+166 1.0 At upper bound
+167 -1.0 At lower/fixed bound
+168 1.0 At upper bound
+169 -1.0 At lower/fixed bound
+170 1.0 At upper bound
+171 -1.0 At lower/fixed bound
+172 1.0 At upper bound
+173 -1.0 At lower/fixed bound
+174 1.0 At upper bound
+175 -1.0 At lower/fixed bound
+176 1.0 At upper bound
+177 -1.0 At lower/fixed bound
+178 1.0 At upper bound
+179 -1.0 At lower/fixed bound
+180 1.0 At upper bound
+181 -1.0 At lower/fixed bound
+182 -1.0 At lower/fixed bound
+183 1.0 At upper bound
+184 1.0 At upper bound
+185 -1.0 At lower/fixed bound
+186 1.0 Basic
+187 -1.0 At lower/fixed bound
+188 1.0 At upper bound
+189 -1.0 At lower/fixed bound
+190 -1.0 At lower/fixed bound
+191 1.0 At upper bound
+192 1.0 At upper bound
+193 -1.0 At lower/fixed bound
+194 1.0 At upper bound
+195 -1.0 At lower/fixed bound
+196 1.0 At upper bound
+197 -1.0 Basic
+198 -1.0 At lower/fixed bound
+199 1.0 Basic
+200 1.0 At upper bound
+201 -1.0 At lower/fixed bound
+202 1.0 At upper bound
+203 -1.0 At lower/fixed bound
+204 1.0 At upper bound
+205 -1.0 At lower/fixed bound
+206 -1.0 At lower/fixed bound
+207 1.0 At upper bound
+208 1.0 At upper bound
+209 -1.0 At lower/fixed bound
+210 -1.0 At lower/fixed bound
+211 1.0 At upper bound
+212 -1.0 At lower/fixed bound
+213 1.0 At upper bound
+214 -1.0 At lower/fixed bound
+215 1.0 At upper bound
+216 1.0 At upper bound
+217 -1.0 At lower/fixed bound
+218 -1.0 At lower/fixed bound
+219 1.0 At upper bound
+220 -1.0 At lower/fixed bound
+221 1.0 At upper bound
+222 -1.0 At lower/fixed bound
+223 1.0 At upper bound
+224 1.0 At upper bound
+225 -1.0 At lower/fixed bound
+226 1.0 At upper bound
+227 -1.0 At lower/fixed bound
+228 1.0 At upper bound
+229 -1.0 At lower/fixed bound
+230 -1.0 At lower/fixed bound
+231 1.0 At upper bound
+232 1.0 At upper bound
+233 -1.0 At lower/fixed bound
+234 1.0 At upper bound
+235 -1.0 At lower/fixed bound
+236 1.0 At upper bound
+237 -1.0 At lower/fixed bound
+238 -1.0 At lower/fixed bound
+239 1.0 At upper bound
+240 1.0 At upper bound
+241 -1.0 At lower/fixed bound
+242 -1.0 At lower/fixed bound
+243 1.0 At upper bound
+244 -1.0 At lower/fixed bound
+245 1.0 At upper bound
+246 -1.0 At lower/fixed bound
+247 1.0 At upper bound
+248 1.0 Basic
+249 -1.0 At lower/fixed bound
+250 -1.0 At lower/fixed bound
+251 1.0 At upper bound
+252 -1.0 At lower/fixed bound
+253 1.0 At upper bound
+254 -1.0 At lower/fixed bound
+255 1.0 At upper bound
+256 1.0 At upper bound
+257 1.0 At upper bound
+258 1.0 At upper bound
+259 -1.0 At lower/fixed bound
+260 1.0 At upper bound
+261 -1.0 At lower/fixed bound
+262 -1.0 At lower/fixed bound
+263 -1.0 At lower/fixed bound
+264 1.0 At upper bound
+265 -1.0 At lower/fixed bound
+266 1.0 At upper bound
+267 -1.0 At lower/fixed bound
+268 1.0 At upper bound
+269 -1.0 At lower/fixed bound
+270 -1.0 At lower/fixed bound
+271 1.0 At upper bound
+272 1.0 At upper bound
+273 -1.0 Basic
+274 -1.0 At lower/fixed bound
+275 -1.0 At lower/fixed bound
+276 -1.0 At lower/fixed bound
+277 -1.0 At lower/fixed bound
+278 -1.0 At lower/fixed bound
+279 -1.0 At lower/fixed bound
+280 1.0 At upper bound
+281 -1.0 At lower/fixed bound
+282 -1.0 At lower/fixed bound
+283 1.0 At upper bound
+284 -1.0 At lower/fixed bound
+285 -0.0 Basic
+286 -1.0 At lower/fixed bound
+287 1.0 At upper bound
+288 1.0 At upper bound
+289 -1.0 At lower/fixed bound
+290 1.0 At upper bound
+291 -1.0 At lower/fixed bound
+292 1.0 At upper bound
+293 -1.0 At lower/fixed bound
+294 -1.0 At lower/fixed bound
+295 1.0 At upper bound
+296 1.0 At upper bound
+297 -1.0 At lower/fixed bound
+298 -0.0 Basic
+299 -1.0 At lower/fixed bound
+300 1.0 Basic
+301 -1.0 At lower/fixed bound
+302 -1.0 At lower/fixed bound
+303 1.0 At upper bound
+304 1.0 At upper bound
+305 -1.0 At lower/fixed bound
+306 -1.0 At lower/fixed bound
+307 1.0 At upper bound
+308 -1.0 At lower/fixed bound
+309 -0.0 Basic
+310 -1.0 At lower/fixed bound
+311 1.0 At upper bound
+312 1.0 At upper bound
+313 -1.0 At lower/fixed bound
+314 -1.0 At lower/fixed bound
+315 1.0 At upper bound
+316 -1.0 At lower/fixed bound
+317 1.0 At upper bound
+318 -1.0 At lower/fixed bound
+319 1.0 At upper bound
+320 1.0 At upper bound
+321 -1.0 At lower/fixed bound
+322 -1.0 At lower/fixed bound
+323 -1.0 At lower/fixed bound
+324 -1.0 At lower/fixed bound
+325 -1.0 At lower/fixed bound
+326 -1.0 At lower/fixed bound
+327 -1.0 At lower/fixed bound
+328 1.0 At upper bound
+329 -1.0 At lower/fixed bound
+330 -1.0 At lower/fixed bound
+331 1.0 At upper bound
+332 -1.0 At lower/fixed bound
+333 1.0 At upper bound
+334 -1.0 At lower/fixed bound
+335 1.0 At upper bound
+336 -1.0 At lower/fixed bound
+337 -1.0 At lower/fixed bound
+338 -1.0 At lower/fixed bound
+339 -1.0 At lower/fixed bound
+340 -1.0 At lower/fixed bound
+341 -1.0 At lower/fixed bound
+342 66.0 Basic
+343 -45.0 Basic
+Constraints
+sampleset
+    0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 energy num_oc.
+0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 +1 -1 +1 -1 +1 -1 +1 -1  -60.0       1
+['SPIN', 1 rows, 1 samples, 18 variables]
+x10 & x11 & x12 & x13 & x14 & x5 & x7 & x8 & ~x0 & ~x1 & ~x15 & ~x2 & ~x3 & ~x4 & ~x6 & ~x9 & (x15 | x16 | ~x17) & (x15 | x17 | ~x16) & (x15 | x3 | ~x16) & (x15 | x3 | ~x17) & (x16 | x6 | ~x17) & (x17 | x2 | ~x16) & (x17 | x6 | ~x16) & (x2 | x3 | ~x16) & (x3 | x6 | ~x16) & (x3 | x6 | ~x17) & (x15 | ~x16 | ~x7) & (x15 | ~x17 | ~x7) & (x16 | ~x11 | ~x17) & (x16 | ~x14 | ~x17) & (x17 | ~x10 | ~x16) & (x17 | ~x11 | ~x16) & (x17 | ~x14 | ~x16) & (x2 | ~x16 | ~x7) & (x3 | ~x10 | ~x16) & (x3 | ~x11 | ~x16) & (x3 | ~x11 | ~x17) & (x3 | ~x14 | ~x16) & (x3 | ~x14 | ~x17) & (x3 | ~x16 | ~x17) & (x6 | ~x16 | ~x7) & (x6 | ~x17 | ~x7) & (~x10 | ~x16 | ~x7) & (~x11 | ~x16 | ~x7) & (~x11 | ~x17 | ~x7) & (~x14 | ~x16 | ~x7) & (~x14 | ~x17 | ~x7) & (~x16 | ~x17 | ~x7)
+
