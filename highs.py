@@ -146,22 +146,21 @@ def getEquations(*x, symexpr, N):
     a = numpy.zeros(N*(N+1)+2)
     for i in range(N):
         a[i] = convert_to_minus(x[i])  # find coefficients for h_i
-        for row in range(N):
-            for col in range(N):
-                if (row < col):
-                    # find coefficients for J_ij, i<j
-                    a[col + row*N +
-                        N] = convert_to_minus(x[row])*convert_to_minus(x[col])
-                else:
-                    a[col + row*N + N] = 0.0
-        sat = symexpr(x)
-        if (sat == True):
-            a[N*(N+1)] = 0.0
-        else:
-            a[N*(N+1)] = -1.0  # find coefficients for g
-        a[N*(N+1)+1] = -1.0  # coefficient for k
+    for row in range(N):
+        for col in range(N):
+            if (row < col):
+                # find coefficients for J_ij, i<j
+                a[col + row*N + N] = convert_to_minus(x[row])*convert_to_minus(x[col])
+            else:
+                 a[col + row*N + N] = 0.0
+    sat = symexpr(x)
+    if (sat == True):
+        a[N*(N+1)] = 0.0
+    else:
+        a[N*(N+1)] = -1.0  # find coefficients for g
+    a[N*(N+1)+1] = -1.0  # coefficient for k
 
-        return list(a)
+    return list(a)
 
 def findHamiltonian(xx, nvars):
     ### Hamiltonian
